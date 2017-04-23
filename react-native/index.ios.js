@@ -12,6 +12,20 @@ import {
   ListView,
   View
 } from 'react-native';
+import OAuthManager from 'react-native-oauth';
+import env from './env.js';
+const manager = new OAuthManager('mobile-performance-react-native-ios');
+
+manager.configure({
+  github: {
+    client_id: env.IOS_CLIENT_ID,
+    client_secret: env.IOS_CLIENT_SECRET,
+  },
+});
+
+manager.authorize('github', { scopes: 'user'})
+.then(resp => console.log('Your users ID', resp))
+.catch(err => console.log('There was an error', err));
 
 export default class reactNativeTest extends Component {
   constructor() {

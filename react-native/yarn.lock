@@ -1760,7 +1760,7 @@ inquirer@^0.12.0:
     strip-ansi "^3.0.0"
     through "^2.3.6"
 
-invariant@^2.2.0:
+invariant@^2.2.0, invariant@^2.2.1:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.2.tgz#9e1f56ac0acdb6bf303306f338be3b204ae60360"
   dependencies:
@@ -2903,6 +2903,13 @@ react-deep-force-update@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/react-deep-force-update/-/react-deep-force-update-1.0.1.tgz#f911b5be1d2a6fe387507dd6e9a767aa2924b4c7"
 
+react-native-oauth@^2.1.16:
+  version "2.1.16"
+  resolved "https://registry.yarnpkg.com/react-native-oauth/-/react-native-oauth-2.1.16.tgz#0f0bebf99d162d24d5e102fd7172b66c959b493c"
+  dependencies:
+    invariant "^2.2.1"
+    valib "^2.0.0"
+
 react-native@0.42.0:
   version "0.42.0"
   resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.42.0.tgz#59b501603a63232598fff653a36307a26010402e"
@@ -3608,6 +3615,10 @@ utils-merge@1.0.0:
 uuid@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.0.1.tgz#6544bba2dfda8c1cf17e629a3a305e2bb1fee6c1"
+
+valib@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/valib/-/valib-2.0.0.tgz#e0d455b10e17ae605c0f33971adac73564ee18a7"
 
 validate-npm-package-license@^3.0.1:
   version "3.0.1"
