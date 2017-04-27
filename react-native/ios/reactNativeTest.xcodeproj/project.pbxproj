@@ -39,6 +39,8 @@
 		812450E83649EB3D4BAA9641 /* Pods_reactNativeTest_tvOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2EE24FF559CA96EDDA3E58B /* Pods_reactNativeTest_tvOSTests.framework */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		8FBFEC901EACE27B00146AF7 /* libOAuthManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FBFEC761EACE26500146AF7 /* libOAuthManager.a */; };
+		8FEACD2D1EB0CA2C009D9398 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FEACD121EB0C9E0009D9398 /* Roboto-Regular.ttf */; };
+		8FEACD2E1EB0CA30009D9398 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FEACD111EB0C9E0009D9398 /* Roboto-Bold.ttf */; };
 		94D1AE8E3813CF2389A95F17 /* Pods_reactNativeTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5F40CC0ECF6878EFA5587B9 /* Pods_reactNativeTestTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -273,6 +275,8 @@
 		8B20E15C9D5BE4FC6675FF22 /* Pods-reactNativeTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactNativeTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-reactNativeTest/Pods-reactNativeTest.debug.xcconfig"; sourceTree = "<group>"; };
 		8D1E3E214C7B036FFA3594DB /* Pods-reactNativeTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactNativeTestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-reactNativeTestTests/Pods-reactNativeTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8FBFECB81EACE38000146AF7 /* reactNativeTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = reactNativeTest.entitlements; path = reactNativeTest/reactNativeTest.entitlements; sourceTree = "<group>"; };
+		8FEACD111EB0C9E0009D9398 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		8FEACD121EB0C9E0009D9398 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		A2EE24FF559CA96EDDA3E58B /* Pods_reactNativeTest_tvOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_reactNativeTest_tvOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE5577E9E4647E75F0E2E6A2 /* Pods-reactNativeTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactNativeTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-reactNativeTest/Pods-reactNativeTest.release.xcconfig"; sourceTree = "<group>"; };
 		C5F40CC0ECF6878EFA5587B9 /* Pods_reactNativeTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_reactNativeTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -501,6 +505,8 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				8FEACD111EB0C9E0009D9398 /* Roboto-Bold.ttf */,
+				8FEACD121EB0C9E0009D9398 /* Roboto-Regular.ttf */,
 				13B07FAE1A68108700A75B9A /* reactNativeTest */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* reactNativeTestTests */,
@@ -928,6 +934,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FEACD2E1EB0CA30009D9398 /* Roboto-Bold.ttf in Resources */,
+				8FEACD2D1EB0CA2C009D9398 /* Roboto-Regular.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
