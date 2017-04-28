@@ -141,11 +141,11 @@ export default class RootNavigator extends Component {
         if (route) {
             let state = {};
 
-            if (route.hideNavigationBar && this.state.hideNavigationBar !== route.hideNavigationBar) {
+            if (this.state.hideNavigationBar !== route.hideNavigationBar) {
                 state.hideNavigationBar = route.hideNavigationBar;
             }
 
-            if (route.statusBarStyle && this.state.statusBarStyle !== route.statusBarStyle) {
+            if (this.state.statusBarStyle !== route.statusBarStyle) {
                 state.statusBarStyle = route.statusBarStyle;
                 StatusBar.setBarStyle(route.statusBarStyle, true);
                 StatusBar.setHidden(false, "slide");

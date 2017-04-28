@@ -1,5 +1,6 @@
 import Repositories from '../components/repositories';
 import Login from '../components/login';
+import Avatar from '../components/avatar';
 
 class Routes {
     get(route, args) {
@@ -27,7 +28,7 @@ class Routes {
             title: 'Мои репозитории',
             component: Repositories,
             leftButton: null,
-            rightButton: null,
+            rightButton: Avatar,
             hideNavigationBar: false,
             statusBarStyle: 'default'
         };

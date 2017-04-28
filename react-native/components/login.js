@@ -3,20 +3,12 @@ import { View,
          Text, 
          StyleSheet,
          Dimensions,
-         Image 
+         Image,
+         AsyncStorage
 } from 'react-native';
-import OAuthManager from 'react-native-oauth';
-import env from '../env.js';
+
 import AccessToken from '../shared/access-token';
-const manager = new OAuthManager('mobile-performance-react-native-ios');
-
-manager.configure({
-  github: {
-    client_id: env.IOS_CLIENT_ID,
-    client_secret: env.IOS_CLIENT_SECRET,
-  },
-});
-
+import authManager from '../shared/auth-manager';
 import Button from './button';
 
 const windowWidth = Dimensions.get("window").width;
@@ -27,6 +19,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: '#fff',
     },
     logo: {
         width: windowWidth * 0.5,
@@ -44,10 +37,16 @@ export default class Login extends Component {
         });
     }
     login() {
-        manager.authorize('github', { scopes: 'user'})
+        authManager.authorize('github', { scopes: 'user'})
         .then(resp => {
             AccessToken.set(resp.response.credentials.accessToken);
-            this.props.toRoute('repositories');
+
+            authManager
+            .makeRequest('github', '/user')
+            .then(resp => {
+                AsyncStorage.setItem('user', JSON.stringify(resp.data));
+                this.props.toRoute('repositories');
+            });
         })
         .catch(err => {
             console.log('There was an error', err);
