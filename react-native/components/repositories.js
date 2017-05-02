@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Button from './button';
+import RepoPreview from './repo-preview';
 import { View, ListView, Text, StyleSheet } from 'react-native';
 import authManager from '../shared/auth-manager';
 import AccessToken from '../shared/access-token';
@@ -8,6 +9,10 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fff'
+    },
+    rowItemSeparator: {
+        borderWidth: 1,
+        borderColor: '#F5F5F5',      
     }
 });
 
@@ -38,7 +43,10 @@ export default class Repositories extends Component {
         return (<View style={styles.container}>
                 <ListView
                     dataSource={this.state.dataSource}
-                    renderRow={(rowData) => <View><Text>{rowData.name}</Text></View>}
+                    renderRow={(rowData) => <RepoPreview toRoute={this.props.toRoute} info={rowData} />}
+                    renderSeparator={(sectionId, rowId) => {
+                        return <View key={rowId} style={styles.rowItemSeparator}/>
+                    }}
                 />            
             </View>);
     }
