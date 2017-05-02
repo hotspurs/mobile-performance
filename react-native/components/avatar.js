@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import { StyleSheet, 
-         View, 
-         TouchableOpacity, 
-         Image, AsyncStorage} from 'react-native';
+         View,
+         Image, AsyncStorage, Text} from 'react-native';
+import Menu, { MenuOptions, MenuOption, MenuTrigger } from 'react-native-menu';
+import authManager from '../shared/auth-manager';
+import AccessToken from '../shared/access-token';
+import Routes from '../shared/routes';
 
 const styles = StyleSheet.create({
     container: {
@@ -34,11 +37,22 @@ export default class Avatar extends Component {
     }
     render() {
         return (
-            <View style={styles.container}>
-                <TouchableOpacity>
+            <Menu onSelect={this.logout.bind(this)} style={styles.container}>
+                <MenuTrigger>
                     <Image style={styles.avatar} source={{  uri: this.state.url }} resizeMode="contain" />
-                </TouchableOpacity>
-            </View>
+                </MenuTrigger>
+                <MenuOptions>
+                    <MenuOption value={1}>
+                        <Text>Выйти</Text>
+                    </MenuOption>
+                </MenuOptions>
+            </Menu>
         );
+    }
+    logout() {
+        const route = Routes.get('login')
+        AccessToken.clear();
+        authManager.deauthorize('github');
+        this.props.navigator.push(route);
     }
 }

@@ -50,9 +50,4 @@ export default class Repositories extends Component {
                 />            
             </View>);
     }
-    logout() {
-        AccessToken.clear();
-        authManager.deauthorize('github');
-        this.props.toRoute('login');
-    }
 }
