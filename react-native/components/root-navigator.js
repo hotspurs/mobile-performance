@@ -112,6 +112,7 @@ export default class RootNavigator extends Component {
         return (
             <View style={[styles.sceneContainer, style]}>
                 <route.component
+                    data={route.data ? route.data : {}}
                     navigator={navigator}
                     back={() => this.back()}
                     backToHome={() => this.backToHome()}

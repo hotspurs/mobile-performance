@@ -1,4 +1,6 @@
 import Repositories from '../components/repositories';
+import Repo from '../components/repo';
+import Back from '../components/back';
 import Login from '../components/login';
 import Avatar from '../components/avatar';
 
@@ -28,6 +30,18 @@ class Routes {
             title: 'Мои репозитории',
             component: Repositories,
             leftButton: null,
+            rightButton: Avatar,
+            hideNavigationBar: false,
+            statusBarStyle: 'default'
+        };
+    }
+    repo(data) {
+        return {
+            name: 'repo',
+            title: data.name,
+            data,
+            component: Repo,
+            leftButton: Back,
             rightButton: Avatar,
             hideNavigationBar: false,
             statusBarStyle: 'default'

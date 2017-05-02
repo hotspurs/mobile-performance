@@ -29,7 +29,7 @@ export default class RepoPreview extends Component {
         super(props)
     }
     onButtonPress() {
-        this.props.toRoute('repo');
+        this.props.toRoute('repo', this.props.info);
     }
     render() {
         return (
