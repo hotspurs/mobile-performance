@@ -40,7 +40,6 @@ export default class Login extends Component {
         authManager.authorize('github', { scopes: 'user'})
         .then(resp => {
             AccessToken.set(resp.response.credentials.accessToken);
-
             authManager
             .makeRequest('github', '/user')
             .then(resp => {

@@ -7,16 +7,16 @@ import {
   View
 } from 'react-native';
 import RootNavigator from './components/root-navigator';
-
+import { MenuContext } from 'react-native-menu';
 export default class reactNativeTest extends Component {
   constructor() {
     super();
   }
   render() {
     return (
-      <View style={styles.container}>
+      <MenuContext style={styles.container}>
         <RootNavigator ref="rootNavigator" />
-      </View>
+      </MenuContext>
     );
   }
 }
