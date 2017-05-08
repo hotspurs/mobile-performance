@@ -8,11 +8,13 @@ import {
 
 import SharedStyles from '../shared/styles';
 import Routes from '../shared/routes';
+import Tabs from 'react-native-tabs';
 
 const styles = StyleSheet.create({
     sceneContainer: {
         flex: 1,
         paddingTop: Navigator.NavigationBar.Styles.General.TotalNavHeight,
+        paddingBottom: 50,
     },
     navBar: {
         backgroundColor: '#CCC',
@@ -107,8 +109,27 @@ export default class RootNavigator extends Component {
     _getInitialRoute() {
         return Routes.login();
     }
+    onTabSelect(el) {
+        if (this.state.route !== el.props.name) {
+            this.toRoute(el.props.name);
+        }
+    }
     renderScene(route, navigator) {
         let style = route.hideNavigationBar ? { paddingTop: 0} : {};
+
+        let selected;
+
+        if (route.name === 'repositories' || route.name === 'repo') {
+            selected = 'repositories';
+        } else {
+            selected = route.name;
+        }
+
+        let tabs = <Tabs selected={selected} style={{backgroundColor:'white'}}
+                    selectedStyle={{color:'red'}} onSelect={this.onTabSelect.bind(this)}>
+                        <Text locked={route.name === 'repositories'} name="repositories">Мои репозитории</Text>
+                        <Text locked={route.name === 'search'} name="search">Поиск</Text>
+                    </Tabs>
         return (
             <View style={[styles.sceneContainer, style]}>
                 <route.component
@@ -119,6 +140,7 @@ export default class RootNavigator extends Component {
                     toRoute={(route, args)=> this.toRoute(route, args)}
                     replaceRoute={(route, args) => this.replaceRoute(route, args)}
                 />
+                {route.name !== 'login' ? tabs : null}      
             </View>
         );
     }
@@ -141,6 +163,7 @@ export default class RootNavigator extends Component {
     _setupRoute(route) {
         if (route) {
             let state = {};
+            state.route = route.name;
 
             if (this.state.hideNavigationBar !== route.hideNavigationBar) {
                 state.hideNavigationBar = route.hideNavigationBar;

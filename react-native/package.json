@@ -10,7 +10,8 @@
     "react": "~15.4.1",
     "react-native": "0.42.0",
     "react-native-menu": "^0.20.2",
-    "react-native-oauth": "^2.1.16"
+    "react-native-oauth": "^2.1.16",
+    "react-native-tabs": "^1.0.9"
   },
   "devDependencies": {
     "babel-jest": "19.0.0",
