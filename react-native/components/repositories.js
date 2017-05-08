@@ -3,7 +3,6 @@ import Button from './button';
 import RepoPreview from './repo-preview';
 import { View, ListView, Text, StyleSheet } from 'react-native';
 import authManager from '../shared/auth-manager';
-import AccessToken from '../shared/access-token';
 
 const styles = StyleSheet.create({
     container: {

@@ -34,9 +34,14 @@ export default class RepoPreview extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.name}>
-                    {this.props.info.name}
-                </Text>
+                <View>
+                    <Text style={styles.name}>
+                        {this.props.info.name}
+                    </Text>
+                    <Text>
+                        {this.props.info.owner ? this.props.info.owner.login : null}
+                    </Text>
+                </View>
                 <TouchableOpacity onPress={this.onButtonPress.bind(this)} style={styles.button}>
                     <Text style={styles.buttonText}>Подробнее</Text>
                 </TouchableOpacity>

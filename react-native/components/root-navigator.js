@@ -16,6 +16,11 @@ const styles = StyleSheet.create({
         paddingTop: Navigator.NavigationBar.Styles.General.TotalNavHeight,
         paddingBottom: 50,
     },
+    tabs: {
+        backgroundColor: '#CCC',
+        borderTopColor: '#000',
+        borderTopWidth: 1,
+    },
     navBar: {
         backgroundColor: '#CCC',
         borderBottomColor: '#000',
@@ -125,8 +130,8 @@ export default class RootNavigator extends Component {
             selected = route.name;
         }
 
-        let tabs = <Tabs selected={selected} style={{backgroundColor:'white'}}
-                    selectedStyle={{color:'red'}} onSelect={this.onTabSelect.bind(this)}>
+        let tabs = <Tabs selected={selected} style={styles.tabs}
+                    selectedStyle={{color:'#FFF'}} onSelect={this.onTabSelect.bind(this)}>
                         <Text locked={route.name === 'repositories'} name="repositories">Мои репозитории</Text>
                         <Text locked={route.name === 'search'} name="search">Поиск</Text>
                     </Tabs>

@@ -1,5 +1,6 @@
 import Repositories from '../components/repositories';
 import Repo from '../components/repo';
+import Search from '../components/search';
 import Back from '../components/back';
 import Login from '../components/login';
 import Avatar from '../components/avatar';
@@ -42,6 +43,17 @@ class Routes {
             data,
             component: Repo,
             leftButton: Back,
+            rightButton: Avatar,
+            hideNavigationBar: false,
+            statusBarStyle: 'default'
+        };
+    }
+    search() {
+        return {
+            name: 'search',
+            title: 'Поиск',
+            component: Search,
+            leftButton: null,
             rightButton: Avatar,
             hideNavigationBar: false,
             statusBarStyle: 'default'
