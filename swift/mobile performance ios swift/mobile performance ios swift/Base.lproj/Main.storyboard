@@ -9,23 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="Pj8-a2-7Yq">
-            <objects>
-                <navigationController id="BCV-Z0-SWN" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bgq-P4-w8w">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="wOt-pM-qKo" kind="relationship" relationship="rootViewController" id="Zgq-8a-6nN"/>
-                        <segue destination="Qwm-y3-dgL" kind="show" id="KrQ-Mx-ZLp"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="j6O-6K-mAp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1217" y="97"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="G6P-oe-w3A">
             <objects>
@@ -37,15 +20,35 @@
                     <view key="view" contentMode="scaleToFill" id="Nzc-50-z0u">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GitHub_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="cDF-mA-NlY">
+                                <rect key="frame" x="87.5" y="306.5" width="200" height="54"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ef8-nb-PHI">
+                                <rect key="frame" x="164.5" y="400.5" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="Qwm-y3-dgL" kind="show" id="Zgc-BN-2fH"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cDF-mA-NlY" firstAttribute="centerY" secondItem="Nzc-50-z0u" secondAttribute="centerY" id="0ef-DU-CuP"/>
+                            <constraint firstItem="cDF-mA-NlY" firstAttribute="centerX" secondItem="Nzc-50-z0u" secondAttribute="centerX" id="KBo-0X-emk"/>
+                            <constraint firstItem="cDF-mA-NlY" firstAttribute="centerY" secondItem="Nzc-50-z0u" secondAttribute="centerY" id="Kmf-B1-ZLG"/>
+                            <constraint firstItem="Ef8-nb-PHI" firstAttribute="centerX" secondItem="Nzc-50-z0u" secondAttribute="centerX" id="dHx-Or-Mcm"/>
+                            <constraint firstItem="Ef8-nb-PHI" firstAttribute="top" secondItem="cDF-mA-NlY" secondAttribute="bottom" constant="40" id="esm-KR-eR8"/>
+                            <constraint firstItem="cDF-mA-NlY" firstAttribute="centerX" secondItem="Nzc-50-z0u" secondAttribute="centerX" id="tlR-Bc-lbf"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xP7-40-Thj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mHM-Rx-0kb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-557" y="101"/>
+            <point key="canvasLocation" x="-557.60000000000002" y="100.29985007496252"/>
         </scene>
-        <!--Item 2-->
+        <!--Поиск-->
         <scene sceneID="hee-Th-lac">
             <objects>
                 <viewController id="PWJ-3e-b2D" sceneMemberID="viewController">
@@ -58,31 +61,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="ouK-ev-NIq"/>
+                    <navigationItem key="navigationItem" title="Поиск" id="UAN-y8-nP3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mxw-1r-PMX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1060" y="428"/>
+            <point key="canvasLocation" x="1999.2" y="427.73613193403304"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="8eH-1N-sBi">
-            <objects>
-                <viewController id="cU0-FG-mf6" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="H4o-ey-RNm"/>
-                        <viewControllerLayoutGuide type="bottom" id="K6H-8H-FpF"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kWn-C5-YYs">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="L1H-LU-3Ud" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2127" y="97"/>
-        </scene>
-        <!--Item 1-->
+        <!--Мои репозитории-->
         <scene sceneID="Ufr-gO-Crg">
             <objects>
                 <viewController id="qvI-56-Eew" sceneMemberID="viewController">
@@ -95,11 +80,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="eJ5-92-weR"/>
+                    <navigationItem key="navigationItem" title="Мои репозитории" id="IRS-QF-adD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xl9-lO-UeT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1060" y="-228"/>
+            <point key="canvasLocation" x="1999.2" y="-228.03598200899552"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yzg-6J-eNq">
@@ -111,14 +96,58 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="qvI-56-Eew" kind="relationship" relationship="viewControllers" id="knm-dU-2zl"/>
-                        <segue destination="PWJ-3e-b2D" kind="relationship" relationship="viewControllers" id="svA-rI-rvo"/>
-                        <segue destination="cU0-FG-mf6" kind="show" id="4Og-ad-XY2"/>
+                        <segue destination="3Vr-GN-3JB" kind="relationship" relationship="viewControllers" id="knm-dU-2zl"/>
+                        <segue destination="0xQ-Bd-J3Q" kind="relationship" relationship="viewControllers" id="svA-rI-rvo"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OW0-MZ-K3t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="108" y="101"/>
         </scene>
+        <!--Мои репозитории-->
+        <scene sceneID="Usa-Zt-af7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3Vr-GN-3JB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Мои репозитории" id="eJ5-92-weR">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-15"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rJL-3E-2ME">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qvI-56-Eew" kind="relationship" relationship="rootViewController" id="oFB-2G-XyW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DoJ-q1-VSo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1060" y="-228.03598200899552"/>
+        </scene>
+        <!--Поиск-->
+        <scene sceneID="XuH-xF-7dh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0xQ-Bd-J3Q" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Поиск" id="ouK-ev-NIq">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-15"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DqH-X2-thW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PWJ-3e-b2D" kind="relationship" relationship="rootViewController" id="wFd-Xo-snk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ria-Mu-9Kv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1060" y="427.73613193403304"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="GitHub_Logo" width="200" height="54"/>
+    </resources>
 </document>
