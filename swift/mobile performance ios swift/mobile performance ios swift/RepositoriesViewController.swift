@@ -7,19 +7,41 @@
 //
 
 import UIKit
+import Alamofire
 
 class RepositoriesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var activeRow = 0
+    @IBOutlet var tableView: UITableView!
+    struct Repo {
+        let name : String
+        
+        init(dictionary: [String:String]) {
+            self.name = dictionary["name"] ?? ""
+        }
+    }
+    
+    var repositoriesData = [Repo]()
+
+    func downloadData() {
+        Alamofire.request("https://api.github.com/users/hotspurs/repos").responseJSON { response in
+            //Optional binding to handle exceptions
+            print("=>", response.result.value);
+            if let json = response.result.value as? [[String:String]] {
+                self.repositoriesData = json.map{ Repo(dictionary: $0) }
+                self.tableView.reloadData()
+            }
+        }
+    }
     
     internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4;
+        return repositoriesData.count
     }
     
     
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
-        
-        cell.textLabel?.text = "Row \(indexPath.row)"
+        let repo = repositoriesData[indexPath.row]
+        cell.textLabel?.text = repo.name
         
         return cell
     }
@@ -35,7 +57,7 @@ class RepositoriesViewController: UIViewController, UITableViewDelegate, UITable
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.downloadData();
         // Do any additional setup after loading the view.
     }
 
