@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F283C5B1EC3ADDE00591C53 /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F283C5A1EC3ADDE00591C53 /* RepositoriesViewController.swift */; };
+		8FB8AFE41EC3B0C9007BDA54 /* RepoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB8AFE31EC3B0C9007BDA54 /* RepoViewController.swift */; };
 		8FF8DC681EC1CAC8003F6155 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF8DC671EC1CAC8003F6155 /* AppDelegate.swift */; };
 		8FF8DC6A1EC1CAC8003F6155 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF8DC691EC1CAC8003F6155 /* ViewController.swift */; };
 		8FF8DC6D1EC1CAC8003F6155 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FF8DC6B1EC1CAC8003F6155 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8F283C5A1EC3ADDE00591C53 /* RepositoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoriesViewController.swift; sourceTree = "<group>"; };
+		8FB8AFE31EC3B0C9007BDA54 /* RepoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoViewController.swift; sourceTree = "<group>"; };
 		8FF8DC641EC1CAC8003F6155 /* mobile performance ios swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mobile performance ios swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FF8DC671EC1CAC8003F6155 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FF8DC691EC1CAC8003F6155 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +61,8 @@
 				8FF8DC671EC1CAC8003F6155 /* AppDelegate.swift */,
 				8FF8DC691EC1CAC8003F6155 /* ViewController.swift */,
 				8FF8DC6B1EC1CAC8003F6155 /* Main.storyboard */,
+				8F283C5A1EC3ADDE00591C53 /* RepositoriesViewController.swift */,
+				8FB8AFE31EC3B0C9007BDA54 /* RepoViewController.swift */,
 				8FF8DC6E1EC1CAC8003F6155 /* Assets.xcassets */,
 				8FF8DC701EC1CAC8003F6155 /* LaunchScreen.storyboard */,
 				8FF8DC731EC1CAC8003F6155 /* Info.plist */,
@@ -137,7 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FB8AFE41EC3B0C9007BDA54 /* RepoViewController.swift in Sources */,
 				8FF8DC6A1EC1CAC8003F6155 /* ViewController.swift in Sources */,
+				8F283C5B1EC3ADDE00591C53 /* RepositoriesViewController.swift in Sources */,
 				8FF8DC681EC1CAC8003F6155 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +312,7 @@
 				8FF8DC781EC1CAC8003F6155 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
