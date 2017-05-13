@@ -7,41 +7,24 @@
 //
 
 import UIKit
-import Alamofire
+import Octokit
 
 class RepositoriesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var activeRow = 0
     @IBOutlet var tableView: UITableView!
-    struct Repo {
-        let name : String
-        
-        init(dictionary: [String:String]) {
-            self.name = dictionary["name"] ?? ""
-        }
-    }
-    
-    var repositoriesData = [Repo]()
 
     func downloadData() {
-        Alamofire.request("https://api.github.com/users/hotspurs/repos").responseJSON { response in
-            //Optional binding to handle exceptions
-            print("=>", response.result.value);
-            if let json = response.result.value as? [[String:String]] {
-                self.repositoriesData = json.map{ Repo(dictionary: $0) }
-                self.tableView.reloadData()
-            }
-        }
+
     }
     
     internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return repositoriesData.count
+        return 1
     }
     
     
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
-        let repo = repositoriesData[indexPath.row]
-        cell.textLabel?.text = repo.name
+        cell.textLabel?.text = "1"
         
         return cell
     }

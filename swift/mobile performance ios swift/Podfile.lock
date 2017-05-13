@@ -1,12 +1,15 @@
 PODS:
-  - Alamofire (4.4.0)
+  - NBNRequestKit (2.0.2)
+  - OctoKit.swift (0.7.3):
+    - NBNRequestKit (~> 2.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.4)
+  - OctoKit.swift (= 0.7.3)
 
 SPEC CHECKSUMS:
-  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  NBNRequestKit: 70d514748747aca66e2e2ed17340f91d5ed6d1d4
+  OctoKit.swift: e1c2de583a16cce003fe2321ac0fecc3dcacc5e3
 
-PODFILE CHECKSUM: b62950efb97d7793dd3a65af1f69a6e2f5c906ee
+PODFILE CHECKSUM: 12b2183d219b5db6f2d69cb4aa9b2c03e77646db
 
 COCOAPODS: 1.2.1

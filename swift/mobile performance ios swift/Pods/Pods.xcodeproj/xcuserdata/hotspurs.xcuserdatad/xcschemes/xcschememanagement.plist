@@ -4,7 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Alamofire.xcscheme</key>
+		<key>NBNRequestKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>OctoKit.swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<key>4F88FA4604C7F1CE7F27F55C436BDCBB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A730D80D138FE5B0EA7563E10E0E08C1</key>
+		<key>97984C2BA8A5852B7F3967B084B713D5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CCC6230A036CAEA3A63D5E40EEDC1ACC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

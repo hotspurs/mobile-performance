@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="G6P-oe-w3A">
             <objects>
-                <viewController id="wOt-pM-qKo" sceneMemberID="viewController">
+                <viewController id="wOt-pM-qKo" customClass="ViewController" customModule="mobile_performance_ios_swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AgQ-Ns-myr"/>
                         <viewControllerLayoutGuide type="bottom" id="Jfe-TO-FLy"/>
@@ -28,7 +28,14 @@
                                 <rect key="frame" x="164.5" y="400.5" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="Qwm-y3-dgL" kind="show" id="Zgc-BN-2fH"/>
+                                    <action selector="loginButtonPressed:" destination="wOt-pM-qKo" eventType="touchUpInside" id="blx-Eh-lNO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heq-Kd-B0v">
+                                <rect key="frame" x="192" y="510" width="46" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="Qwm-y3-dgL" kind="show" identifier="auth" id="xce-du-oth"/>
                                 </connections>
                             </button>
                         </subviews>

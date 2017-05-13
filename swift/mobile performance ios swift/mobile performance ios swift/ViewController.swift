@@ -10,9 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBAction func loginButtonPressed(_ sender: Any) {
+        let url = config.authenticate()
+        UIApplication.shared.open(url!)
+        print("Auth")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        if UserDefaults.standard.object(forKey: "accessToken") != nil {
+            DispatchQueue.main.async() {
+                self.performSegue(withIdentifier: "auth", sender: nil)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -3,5 +3,5 @@ platform :ios, '10.0'
 use_frameworks!
 
 target 'mobile performance ios swift' do
-    pod 'Alamofire', '~> 4.4'
+    pod 'OctoKit.swift', '0.7.3'
 end
