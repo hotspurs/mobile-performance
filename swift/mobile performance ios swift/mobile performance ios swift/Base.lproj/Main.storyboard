@@ -117,6 +117,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Мои репозитории" id="IRS-QF-adD"/>
+                    <connections>
+                        <outlet property="tableView" destination="chm-w8-Bgw" id="vd9-05-SnM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xl9-lO-UeT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

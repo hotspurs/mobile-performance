@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     @IBAction func loginButtonPressed(_ sender: Any) {
         let url = config.authenticate()
         UIApplication.shared.open(url!)
-        print("Auth")
     }
     override func viewDidLoad() {
         super.viewDidLoad()

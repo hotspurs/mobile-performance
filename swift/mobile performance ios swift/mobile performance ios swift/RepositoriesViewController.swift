@@ -11,20 +11,40 @@ import Octokit
 
 class RepositoriesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var activeRow = 0
-    @IBOutlet var tableView: UITableView!
+    var repositoriesData = [Repository]()
+    
+    @IBOutlet weak var tableView: UITableView!
 
     func downloadData() {
+        let token = UserDefaults.standard.object(forKey: "accessToken")!
+        let config = TokenConfiguration(String(describing: token))
 
+        Octokit(config).repositories() { response in
+            switch response {
+            case .success(let repositories):
+                print("repositories", repositories)
+                self.repositoriesData = repositories
+                DispatchQueue.main.sync(execute: {
+                    self.tableView!.reloadData()
+                })
+                break
+            // do something
+            case .failure(let error):
+                print("error", error)
+                break
+                // handle any errors
+            }
+        }
     }
     
     internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return repositoriesData.count
     }
     
     
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
-        cell.textLabel?.text = "1"
+        cell.textLabel?.text = repositoriesData[indexPath.row].name
         
         return cell
     }
