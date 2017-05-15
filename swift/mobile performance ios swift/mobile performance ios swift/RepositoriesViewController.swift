@@ -10,9 +10,9 @@ import UIKit
 import Octokit
 
 class RepositoriesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    var activeRow = 0
+
     var repositoriesData = [Repository]()
-    
+    var activeRow: Repository!
     @IBOutlet weak var tableView: UITableView!
 
     func downloadData() {
@@ -49,7 +49,7 @@ class RepositoriesViewController: UIViewController, UITableViewDelegate, UITable
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        activeRow = indexPath.row
+        activeRow = repositoriesData[indexPath.row]
         performSegue(withIdentifier: "toRepoController", sender: nil)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

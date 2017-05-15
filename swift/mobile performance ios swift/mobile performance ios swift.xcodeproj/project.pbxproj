@@ -10,6 +10,7 @@
 		6E93B2E4366787FF9219D175 /* Pods_mobile_performance_ios_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6E99B7F3B77203F5AB7D64 /* Pods_mobile_performance_ios_swift.framework */; };
 		8F283C5B1EC3ADDE00591C53 /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F283C5A1EC3ADDE00591C53 /* RepositoriesViewController.swift */; };
 		8FB8AFE41EC3B0C9007BDA54 /* RepoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB8AFE31EC3B0C9007BDA54 /* RepoViewController.swift */; };
+		8FC0053F1EC96E4700100B35 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC0053E1EC96E4700100B35 /* SearchViewController.swift */; };
 		8FF8DC681EC1CAC8003F6155 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF8DC671EC1CAC8003F6155 /* AppDelegate.swift */; };
 		8FF8DC6A1EC1CAC8003F6155 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF8DC691EC1CAC8003F6155 /* ViewController.swift */; };
 		8FF8DC6D1EC1CAC8003F6155 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FF8DC6B1EC1CAC8003F6155 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 		481EA565E143BBEDE9D8B61D /* Pods-mobile performance ios swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mobile performance ios swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mobile performance ios swift/Pods-mobile performance ios swift.debug.xcconfig"; sourceTree = "<group>"; };
 		8F283C5A1EC3ADDE00591C53 /* RepositoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoriesViewController.swift; sourceTree = "<group>"; };
 		8FB8AFE31EC3B0C9007BDA54 /* RepoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoViewController.swift; sourceTree = "<group>"; };
+		8FC0053E1EC96E4700100B35 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		8FF8DC641EC1CAC8003F6155 /* mobile performance ios swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mobile performance ios swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FF8DC671EC1CAC8003F6155 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FF8DC691EC1CAC8003F6155 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				8FF8DC671EC1CAC8003F6155 /* AppDelegate.swift */,
 				8FF8DC691EC1CAC8003F6155 /* ViewController.swift */,
 				8FF8DC6B1EC1CAC8003F6155 /* Main.storyboard */,
+				8FC0053E1EC96E4700100B35 /* SearchViewController.swift */,
 				8F283C5A1EC3ADDE00591C53 /* RepositoriesViewController.swift */,
 				8FB8AFE31EC3B0C9007BDA54 /* RepoViewController.swift */,
 				8FF8DC6E1EC1CAC8003F6155 /* Assets.xcassets */,
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FC0053F1EC96E4700100B35 /* SearchViewController.swift in Sources */,
 				8FB8AFE41EC3B0C9007BDA54 /* RepoViewController.swift in Sources */,
 				8FF8DC6A1EC1CAC8003F6155 /* ViewController.swift in Sources */,
 				8F283C5B1EC3ADDE00591C53 /* RepositoriesViewController.swift in Sources */,

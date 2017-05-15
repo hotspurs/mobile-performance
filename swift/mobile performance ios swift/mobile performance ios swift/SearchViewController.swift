@@ -1,20 +1,24 @@
 //
-//  RepoViewController.swift
+//  SearchViewController.swift
 //  mobile performance ios swift
 //
-//  Created by Владислав Дубов on 10/05/2017.
+//  Created by Владислав Дубов on 15/05/2017.
 //  Copyright © 2017 Владислав Дубов. All rights reserved.
 //
 
 import UIKit
-import Octokit
 
-class RepoViewController: UIViewController {
-    @IBOutlet weak var name: UILabel!
-    var activeRow: Repository!
+class SearchViewController: UIViewController {
+
+    @IBOutlet weak var textField: UITextField!
+    func textFieldDidChange(_ textField: UITextField) {
+        print("Change", textField.text)
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.name.text = activeRow.name;
+        textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+
         // Do any additional setup after loading the view.
     }
 
