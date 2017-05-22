@@ -14,6 +14,8 @@ class RepoViewController: UIViewController {
     var activeRow: Repository!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = activeRow.name;
+        self.navigationController!.navigationBar.topItem!.title = ""
         self.name.text = activeRow.name;
         // Do any additional setup after loading the view.
     }

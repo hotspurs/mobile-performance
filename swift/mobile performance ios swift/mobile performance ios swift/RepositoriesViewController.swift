@@ -63,6 +63,10 @@ class RepositoriesViewController: UIViewController, UITableViewDelegate, UITable
         self.downloadData();
         // Do any additional setup after loading the view.
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated);
+        self.navigationItem.title = "Мои репозитории";
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

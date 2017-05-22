@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wOt-pM-qKo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wOt-pM-qKo">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -159,7 +159,14 @@
                             <constraint firstAttribute="bottom" secondItem="chm-w8-Bgw" secondAttribute="bottom" id="yRc-aT-YBm"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Мои репозитории" id="IRS-QF-adD"/>
+                    <navigationItem key="navigationItem" title="Мои репозитории" id="IRS-QF-adD">
+                        <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="HfQ-EL-Bbt">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5gM-Ye-Gzf">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="chm-w8-Bgw" id="vd9-05-SnM"/>
                     </connections>
