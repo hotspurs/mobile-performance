@@ -1,0 +1,9 @@
+{
+	"fix": false,
+	"fileExtensions": [".js", ".jsx"],
+	"preset": "airbnb",
+	"maximumLineLength": 120,
+	"maxErrors": -1,
+	"disallowQuotedKeysInObjects": false,
+	"requireDollarBeforejQueryAssignment": false
+}
