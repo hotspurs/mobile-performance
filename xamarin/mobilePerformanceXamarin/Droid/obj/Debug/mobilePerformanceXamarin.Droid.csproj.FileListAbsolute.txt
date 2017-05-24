@@ -1,0 +1,9 @@
+/Users/hotspurs/prj/mobile-perfomance/xamarin/mobilePerformanceXamarin/Droid/obj/Debug/mobilePerformanceXamarin.Droid.csprojResolveAssemblyReference.cache
+/Users/hotspurs/prj/mobile-perfomance/xamarin/mobilePerformanceXamarin/Droid/obj/Debug/mobilePerformanceXamarin.Droid.csproj.CoreCompileInputs.cache
+/Users/hotspurs/prj/mobile-perfomance/xamarin/mobilePerformanceXamarin/Droid/obj/Debug/mobilePerformanceXamarin.Droid.Views.AboutPage.xaml.g.cs
+/Users/hotspurs/prj/mobile-perfomance/xamarin/mobilePerformanceXamarin/Droid/obj/Debug/mobilePerformanceXamarin.Droid.Views.ItemDetailPage.xaml.g.cs
+/Users/hotspurs/prj/mobile-perfomance/xamarin/mobilePerformanceXamarin/Droid/obj/Debug/mobilePerformanceXamarin.Droid.Views.ItemsPage.xaml.g.cs
+/Users/hotspurs/prj/mobile-perfomance/xamarin/mobilePerformanceXamarin/Droid/obj/Debug/mobilePerformanceXamarin.Droid.Views.LoginPage.xaml.g.cs
+/Users/hotspurs/prj/mobile-perfomance/xamarin/mobilePerformanceXamarin/Droid/obj/Debug/mobilePerformanceXamarin.Droid.Views.NewItemPage.xaml.g.cs
+/Users/hotspurs/prj/mobile-perfomance/xamarin/mobilePerformanceXamarin/Droid/obj/Debug/mobilePerformanceXamarin.Droid.App.xaml.g.cs
+/Users/hotspurs/prj/mobile-perfomance/xamarin/mobilePerformanceXamarin/Droid/obj/Debug/mobilePerformanceXamarin.Droid.LoginPage.xaml.g.cs
